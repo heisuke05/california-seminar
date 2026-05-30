@@ -729,7 +729,24 @@ export default function Home() {
                 </svg>
               }
               title="Place"
-              lines={["California Spiritual Center"]}
+              lines={[
+                "California Spiritual Center",
+                <a
+                  key="addr"
+                  href="https://maps.google.com/?q=600+N+Golden+Circle+Dr,+Santa+Ana,+CA+92705"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#7D5A4F",
+                    textDecoration: "underline",
+                    textUnderlineOffset: "3px",
+                    fontSize: "0.88rem",
+                    lineHeight: 1.75,
+                  }}
+                >
+                  600 N Golden Circle Dr.<br />Santa Ana, CA 92705
+                </a>,
+              ]}
             />
 
             {/* Seminar Fee */}
@@ -965,7 +982,15 @@ export default function Home() {
               lineHeight: 1.8,
             }}
           >
-            California Spiritual Center
+            California Spiritual Center<br />
+            <a
+              href="https://maps.google.com/?q=600+N+Golden+Circle+Dr,+Santa+Ana,+CA+92705"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#7D5A4F", textDecoration: "underline" }}
+            >
+              600 N Golden Circle Dr.<br />Santa Ana, CA 92705
+            </a>
           </p>
         </div>
       </section>
@@ -1009,7 +1034,7 @@ function InfoCard({
 }: {
   icon: React.ReactNode;
   title: string;
-  lines: string[];
+  lines: React.ReactNode[];
   small?: boolean;
 }) {
   return (
