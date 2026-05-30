@@ -759,7 +759,7 @@ export default function Home() {
               }
               title="Seminar Fee"
               lines={[
-                "$120.00*",
+                "$130.00*",
                 "*Due date: One week prior to first day",
                 "*Cancellation: Fully refunded before seminar starts. No refunds once started.",
               ]}
